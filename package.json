@@ -3,11 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+       "replace-vars": "node ./src/environments/replace_environment_variables.js",
+    "start": "npm run-script replace-vars && ng serve",
+    "build": "npm run-script replace-vars && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:website": "node dist/website/server/server.mjs"
+    "serve:ssr:website": "node dist/website/server/server.mjs",
+        "lint": "ng lint",
+    "pretty": "npx prettier --write ./src/app/",
+    "prepare": "husky",
+    "pre-commit": "npm run pretty && npm run lint"
   },
   "private": true,
   "dependencies": {
@@ -15,6 +20,7 @@
     "@angular/common": "^19.1.0",
     "@angular/compiler": "^19.1.0",
     "@angular/core": "^19.1.0",
+    "@angular/fire": "^19.1.0",
     "@angular/forms": "^19.1.0",
     "@angular/platform-browser": "^19.1.0",
     "@angular/platform-browser-dynamic": "^19.1.0",
@@ -22,6 +28,7 @@
     "@angular/router": "^19.1.0",
     "@angular/ssr": "^19.1.8",
     "express": "^4.18.2",
+    "firebase": "^11.7.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
@@ -39,6 +46,16 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.7.2"
+    "angular-eslint": "19.1.0",
+    "eslint": "^9.20.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.5.2",
+    "prettier-eslint": "^16.3.0",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "8.23.0"
   }
 }
