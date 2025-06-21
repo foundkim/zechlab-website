@@ -20,11 +20,13 @@
         </li>
       </ul>
     </div>
-    <div class="blog">Blog</div>
+    <div class="blog">
+      <h2 class="accent">Blog</h2>
+    </div>
     <div class="contact">
       <ul>
         <h2 class="accent">Contact</h2>
-        <li *ngFor="let item of contactLinks">
+        <li *ngFor="let item of contactLinks" class="contact-item">
           <mat-icon>
             {{ item.icon }}
           </mat-icon>
