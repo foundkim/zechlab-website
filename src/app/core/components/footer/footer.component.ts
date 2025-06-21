@@ -12,5 +12,5 @@ import { contactLinks, socialLinks } from '../../config/contact';
 export class FooterComponent {
   aboutChildrenLink = navItems[0].children;
   contactLinks = contactLinks;
-  socialLinks = socialLinks
+  socialLinks = socialLinks;
 }

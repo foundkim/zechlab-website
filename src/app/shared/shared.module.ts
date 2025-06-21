@@ -15,7 +15,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-		MatMenuModule,
+    MatMenuModule,
   ],
 })
 export class SharedModule {}

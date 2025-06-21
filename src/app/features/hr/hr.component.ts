@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-hr',
   imports: [],
   templateUrl: './hr.component.html',
-  styleUrl: './hr.component.css'
+  styleUrl: './hr.component.css',
 })
-export class HrComponent {
-
-}
+export class HrComponent {}
