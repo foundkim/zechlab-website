@@ -1,0 +1,47 @@
+<mat-toolbar>
+  <div class="flex justify-between header-container w-full px-[15%]">
+    <div class="logo-container w-[20%]">
+      <img src="assets/images/logo.png" alt="logo" class="logo" />
+    </div>
+    <div class="flex flex-col items-end py-4">
+      <div class="flex gap-2 language-container">
+        <div *ngFor="let lang of langs">
+          <a class="nav-item" [ngClass]="{ active: lang === currentLang() }">
+            {{ lang.toLocaleUpperCase() }}
+          </a>
+        </div>
+      </div>
+      <div class="flex gap-4 flex-row">
+        <ng-container *ngFor="let item of navItemsAvailable">
+          <ng-container *ngIf="!item.children; else hasChildren">
+            <a
+              class="nav-item"
+              [routerLink]="item.route"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              {{ item.title }}
+            </a>
+          </ng-container>
+          <ng-template #hasChildren>
+            <a class="nav-item" [matMenuTriggerFor]="menu" mat-a>
+              {{ item.title }}
+            </a>
+            <mat-menu #menu="matMenu">
+              <a
+                class="nav-item"
+                mat-menu-item
+                *ngFor="let child of item.children"
+                [routerLink]="child.route"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+              >
+                {{ child.title }}
+              </a>
+            </mat-menu>
+          </ng-template>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>

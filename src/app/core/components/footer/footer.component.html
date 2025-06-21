@@ -1,0 +1,64 @@
+<footer>
+  <div class="links">
+    <div class="bottom-logo">
+      <a routerLink="/" class="logo-link">
+        <img
+          src="assets/images/logo-white.png"
+          alt="Logo de Zechlab"
+          title="ZECHLAB LOGO"
+        />
+      </a>
+    </div>
+    <div class="about">
+      <ul>
+        <h2 class="accent">à propos</h2>
+        <li *ngFor="let item of aboutChildrenLink">
+          <a [routerLink]="item.route" routerLinkActive="active"
+            >{{ item.title }}
+          </a>
+          <mat-icon>chevron_right</mat-icon>
+        </li>
+      </ul>
+    </div>
+    <div class="blog">Blog</div>
+    <div class="contact">
+      <ul>
+        <h2 class="accent">Contact</h2>
+        <li *ngFor="let item of contactLinks">
+          <mat-icon>
+            {{ item.icon }}
+          </mat-icon>
+          <a [routerLink]="item.link" routerLinkActive="active"
+            >{{ item.value }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="contact_us_btn">
+    <a routerLink="/contact">Contatez-nous ></a>
+  </div>
+  <div class="legal-infos">
+    <div class="copyright">
+      <div>Copyright ©</div>
+      <div>|</div>
+      <div>2025 Zechlab.</div>
+      <div>|</div>
+      <div>Tous droits réservés</div>
+    </div>
+    <div class="social">
+      <ul>
+        <li *ngFor="let item of socialLinks">
+          <a
+            [href]="item.value"
+            target="_blank"
+            class="ga_footer_social"
+            title="{{ item.name }}"
+          >
+            <mat-icon svgIcon="{{ item.icon }}"></mat-icon>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>

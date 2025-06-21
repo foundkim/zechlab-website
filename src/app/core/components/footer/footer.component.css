@@ -1,0 +1,61 @@
+footer {
+  color: #fff;
+  display: block;
+  background: #000000;
+  padding: 30px 0 50px 0;
+  position: relative;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bottom-logo {
+  width: 255px;
+  margin: 0 0 30px 0;
+}
+.copyright {
+  display: flex;
+  gap: 10px;
+}
+
+.legal-infos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+
+  margin: 0 150px;
+}
+.social ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact li,
+.about li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact_us_btn {
+  position: absolute;
+  top: 12%;
+  right: 0;
+}
+
+.contact_us_btn a {
+  display: inline-block;
+  line-height: 1;
+  font-size: 20px;
+  color: #0b2949;
+  font-weight: 500;
+  padding: 25px 25px;
+  background-color: #f1b51c;
+  border-top-left-radius: 45px;
+  border-bottom-left-radius: 45px;
+}
