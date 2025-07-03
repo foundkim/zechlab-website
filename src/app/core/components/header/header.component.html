@@ -3,7 +3,7 @@
     <div class="logo-container w-[20%]">
       <img src="assets/images/logo.png" alt="logo" class="logo" />
     </div>
-    <div class="flex flex-col items-end py-4" >
+    <div class="flex flex-col items-end py-4">
       <div class="flex gap-2 language-container">
         <div *ngFor="let lang of langs">
           <a class="nav-item" [ngClass]="{ active: lang === currentLang() }">
