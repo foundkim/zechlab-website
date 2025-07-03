@@ -2,6 +2,11 @@ import { NavItem } from './../models/nav-item';
 
 export const navItems: NavItem[] = [
   {
+    id: 'home',
+    title: 'Accueil',
+    route: '/',
+  },
+  {
     id: 'about',
     title: 'A Propos',
     route: '/about',

@@ -1,10 +1,14 @@
 import { Routes } from '@angular/router';
-import { PresentationComponent } from './features/about/pages/presentation/presentation.component';
-import { TeamComponent } from './features/about/pages/team/team.component';
-import { ValuesComponent } from './features/about/pages/values/values.component';
-
+import { HomeComponent } from './features/welcome/pages/home/home.component';
 export const routes: Routes = [
-  { path: 'presentation', component: PresentationComponent },
-  { path: 'team', component: TeamComponent },
-  { path: 'values', component: ValuesComponent },
+  {
+    path: '',
+    component: HomeComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'about',
+    loadChildren: () =>
+      import('./features/about/module/about.module').then((m) => m.AboutModule),
+  },
 ];

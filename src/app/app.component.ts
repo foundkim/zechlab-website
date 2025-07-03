@@ -3,10 +3,11 @@ import { HeaderComponent } from './core/components/header/header.component';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { SharedModule } from './shared/shared.module';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, FooterComponent],
+  imports: [HeaderComponent, FooterComponent, SharedModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

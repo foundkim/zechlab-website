@@ -23,3 +23,7 @@ mat-toolbar {
   border-bottom: 4px #f1b51c solid;
   cursor: pointer;
 }
+
+.active {
+  border-bottom: 4px #f1b51c solid;
+}

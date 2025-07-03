@@ -24,7 +24,12 @@
             </a>
           </ng-container>
           <ng-template #hasChildren>
-            <a class="nav-item" [matMenuTriggerFor]="menu" mat-a>
+            <a
+              [ngClass]="{ active: checkIfRouteIsActive(item) }"
+              class="nav-item"
+              [matMenuTriggerFor]="menu"
+              mat-a
+            >
               {{ item.title }}
             </a>
             <mat-menu #menu="matMenu">
@@ -32,7 +37,7 @@
                 class="nav-item"
                 mat-menu-item
                 *ngFor="let child of item.children"
-                [routerLink]="child.route"
+                [routerLink]="[item.route + '/' + child.route]"
                 routerLinkActive="active"
                 [routerLinkActiveOptions]="{ exact: true }"
               >
