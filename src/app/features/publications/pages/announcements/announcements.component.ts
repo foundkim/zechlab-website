@@ -10,5 +10,5 @@ import { announcements } from '../../../config/announcements';
   styleUrls: ['./announcements.component.css'],
 })
 export class AnnouncementsComponent {
-  announcements: typeof announcements = announcements;
+  announcements = announcements;
 }

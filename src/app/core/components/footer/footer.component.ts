@@ -10,7 +10,7 @@ import { contactLinks, socialLinks } from '../../config/contact';
   styleUrl: './footer.component.css',
 })
 export class FooterComponent {
-  aboutChildrenLink = navItems[0].children;
+  aboutChildrenLink = navItems[1].children;
   contactLinks = contactLinks;
   socialLinks = socialLinks;
 }
