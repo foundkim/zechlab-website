@@ -1,1 +1,75 @@
-<p>presentation works!</p>
+<div class="flex flex-col gap-12 p-8 w-full">
+
+    <!-- Section Présentation -->
+    <section class="flex justify-between featured-news-container">
+        <div class="left-section w-1/2">
+            <div class="flex items-center gap-4 mb-4">
+                <div class="line w-8 h-1" [style.background-color]="header.lineColor"></div>
+                <span class="text-xl font-medium text-white">{{ header.label }}</span>
+            </div>
+
+            <div class="relative image-overlay">
+                <div class="triangle_top absolute top-0 left-0"></div>
+
+                <img [src]="imageUrl" alt="Image de fond" class="bg_image w-full h-auto" />
+
+                <div class="triangle_bottom absolute bottom-0 right-0"></div>
+
+                <div
+                    class="absolute -bottom-18 right-0 w-[68%] flex flex-col items-end justify-end text-white logo-area">
+                    <img [src]="header.logoUrl" [alt]="header.logoAlt" class="w-1/2 mb-2" />
+                </div>
+            </div>
+        </div>
+
+        <div class="right-section w-1/2 flex flex-col justify-start items-start px-8">
+            <h2 class="text-2xl font-medium leading-snug text-white w-full text-left">{{ header.vision }}</h2>
+            <a [routerLink]="header.cta.route" class="btn btn-yellow mt-6 self-start">
+                {{ header.cta.label }}
+            </a>
+        </div>
+    </section>
+
+    <!-- Section Intro -->
+    <section id="landing_top" class="bg-gray-100 p-16 rounded-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 wrapper">
+            <div class="intro text-justify space-y-4">
+                <p *ngFor="let paragraph of introParagraphs; let isFirst = first"
+                    [ngClass]="isFirst ? 'text-2xl font-medium text-blue-900 mb-8' : 'text-base text-gray-700 mb-2'">
+                    {{ paragraph }}
+                </p>
+            </div>
+
+            <div class="nav_block bg-white p-6 rounded-lg shadow">
+                <h2 class="text-xl w-full bg-black text-white font-bold mb-4 p-16">{{ nav.title }}</h2>
+                <ul class="space-y-2">
+                    <li *ngFor="let link of nav.links">
+                        <a [routerLink]="link.route"
+                            class="flex justify-start items-start text-gray-600">
+                            {{ link.label }}
+                            <mat-icon>chevron_right</mat-icon>
+                        </a>
+                    </li>
+                </ul>
+                <div class="mt-6">
+                    <a [routerLink]="nav.contactRoute"
+                        class="contact-us_btn btn btn-yellow text-white px-4 py-2 rounded">
+                        {{ nav.contactLabel }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Statistiques -->
+    <section class="about-stats grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div *ngFor="let stat of stats" class="bg-white p-6 rounded shadow-lg capitalize container">
+            <div class="letter-box text-4xl font-bold text-blue-500">{{ stat.letter }}</div>
+            <div class="text-content mt-2">
+                <div class="top-text text-gray-600">{{ stat.label }}</div>
+                <div class="bottom-text text-2xl font-bold">{{ stat.value }}</div>
+            </div>
+        </div>
+    </section>
+
+</div>

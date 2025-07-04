@@ -1,1 +1,10 @@
-<p>team works!</p>
+<div class="grid grid-cols-1 gap-8">
+  <app-team-card
+    *ngFor="let card of teamCards"
+    [title]="card.title"
+    [photo]="card.photo"
+    [addressLines]="card.addressLines"
+    [phone]="card.phone"
+    [actions]="card.actions"
+  ></app-team-card>
+</div>
