@@ -5,7 +5,7 @@ import { SharedModule } from '../../../../shared/shared.module';
   selector: 'app-team-card',
   imports: [SharedModule],
   templateUrl: './team-card.component.html',
-  styleUrl: './team-card.component.css'
+  styleUrl: './team-card.component.css',
 })
 export class TeamCardComponent {
   @Input() title!: string;

@@ -6,7 +6,6 @@ import { TeamComponent } from '../pages/team/team.component';
 import { ValuesComponent } from '../pages/values/values.component';
 import { ServiceComponent } from '../pages/service/service.component';
 
-
 @NgModule({
   declarations: [],
   imports: [
@@ -16,7 +15,7 @@ import { ServiceComponent } from '../pages/service/service.component';
       { path: 'presentation', component: PresentationComponent },
       { path: 'team', component: TeamComponent },
       { path: 'values', component: ValuesComponent },
-      {path: 'service', component: ServiceComponent},
+      { path: 'service', component: ServiceComponent },
     ]),
   ],
 })
