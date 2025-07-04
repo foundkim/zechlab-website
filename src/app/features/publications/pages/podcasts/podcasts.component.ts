@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-podcasts',
   imports: [],
   templateUrl: './podcasts.component.html',
-  styleUrl: './podcasts.component.css'
+  styleUrl: './podcasts.component.css',
 })
-export class PodcastsComponent {
-
-}
+export class PodcastsComponent {}

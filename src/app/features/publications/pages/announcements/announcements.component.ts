@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
+import { SharedModule } from '../../../../shared/shared.module';
+import { PubCardComponent } from '../pub-card/pub-card.component';
+import { announcements } from '../../../config/announcements';
+
 
 @Component({
   selector: 'app-announcements',
-  imports: [],
+  imports: [SharedModule, PubCardComponent],
   templateUrl: './announcements.component.html',
-  styleUrl: './announcements.component.css'
+  styleUrls: ['./announcements.component.css'],
 })
 export class AnnouncementsComponent {
-
+  announcements: typeof announcements = announcements;
 }

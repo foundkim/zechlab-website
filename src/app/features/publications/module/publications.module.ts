@@ -6,8 +6,6 @@ import { PodcastsComponent } from '../pages/podcasts/podcasts.component';
 import { ArticlesComponent } from '../pages/articles/articles.component';
 import { AnnouncementsComponent } from '../pages/announcements/announcements.component';
 
-
-
 @NgModule({
   declarations: [],
   imports: [

@@ -14,6 +14,8 @@ export const routes: Routes = [
   {
     path: 'publications',
     loadChildren: () =>
-      import('./features/publications/module/publications.module').then((m) => m.PublicationsModule),
+      import('./features/publications/module/publications.module').then(
+        (m) => m.PublicationsModule,
+      ),
   },
 ];
