@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './features/welcome/pages/home/home.component';
+import { ContactsComponent } from './features/contacts/contacts.component';
 export const routes: Routes = [
   {
     path: '',
@@ -17,5 +18,9 @@ export const routes: Routes = [
       import('./features/publications/module/publications.module').then(
         (m) => m.PublicationsModule,
       ),
+  },
+  {
+    path: 'contacts',
+    component: ContactsComponent,
   },
 ];

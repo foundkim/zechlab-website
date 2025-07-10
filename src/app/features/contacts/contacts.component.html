@@ -1,0 +1,81 @@
+<div class="bg-gray-100 py-12 px-4 text-center">
+    <h2 class="text-3xl font-bold text-black mb-12">{{ title }}</h2>
+    <h4 class="text-xl text-black mb-12">{{ subtitle }}</h4>
+
+    <div class="flex justify-center gap-8 max-w-6xl mx-auto">
+        <!-- Adresse -->
+        <div class="flex flex-col items-center text-center bg-[#ffffff] border-0 shadow-md hover:shadow-lg p-8"
+            *ngIf="office">
+            <div class="border-b-4 border-[#98d4bc] pb-4">
+                <mat-icon class="text-[#d4a43c] mb-4">location_on</mat-icon>
+                <h3 class="text-lg font-semibold">{{ office.title }}</h3>
+            </div>
+            <p class="text-[#d4a43c] mt-4">{{ office.addressLine1 }}<br>{{ office.addressLine2
+                }}<br>{{office.addressLine3}}</p>
+        </div>
+
+        <!-- Email -->
+        <div class="flex flex-col items-center text-center bg-[#ffffff] border-0 shadow-md hover:shadow-lg p-8"
+            *ngIf="email">
+            <div class="border-b-4 border-[#98d4bc] pb-4">
+                <mat-icon class="text-[#d4a43c] mb-4">{{email.icon}}</mat-icon>
+                <h3 class="text-lg font-semibold">{{ email.title }}</h3>
+            </div>
+            <p class="text-[#d4a43c] mt-4">
+                <a [href]="'mailto:' + email.address" class="text-[#d4a43c] hover:underline">{{ email.address }}</a>
+            </p>
+        </div>
+
+        <!-- Téléphone -->
+        <div class="flex flex-col items-center text-center bg-[#ffffff] border-0 shadow-md hover:shadow-lg p-8"
+            *ngIf="phone">
+            <div class="border-b-4 border-[#98d4bc] pb-4">
+                <mat-icon class="text-[#d4a43c] mb-4">phone</mat-icon>
+                <h3 class="text-lg font-semibold">{{ phone.title }}</h3>
+            </div>
+            <p class="text-[#d4a43c] mt-4">
+                {{ phone.number1 }}<br>{{ phone.number2 }}
+            </p>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <div class="max-w-2xl mx-auto mt-12 p-8 bg-white shadow-md rounded-lg">
+        <h2 class="text-2xl font-bold mb-6 text-center">{{ labels.formTitle }}</h2>
+
+        <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="space-y-6">
+            <!-- Nom -->
+            <div>
+                <label class="block text-gray-700 font-medium mb-1" for="name">{{ labels.name }}</label>
+                <input type="text" id="name" name="name" [(ngModel)]="form.name" [placeholder]="placeholders.name"
+                    required
+                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+
+            <!-- Email -->
+            <div>
+                <label class="block text-gray-700 font-medium mb-1" for="email">{{ labels.email }}</label>
+                <input type="email" id="email" name="email" [(ngModel)]="form.email" [placeholder]="placeholders.email"
+                    required
+                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+
+            <!-- Message -->
+            <div>
+                <label class="block text-gray-700 font-medium mb-1" for="message">{{ labels.message }}</label>
+                <textarea id="message" name="message" rows="5" [(ngModel)]="form.message"
+                    [placeholder]="placeholders.message" required
+                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+
+            <!-- Bouton -->
+            <div class="text-center">
+                <button type="submit" [disabled]="!contactForm.form.valid"
+                    class="bg-[#98d4bc] text-white px-6 py-2 rounded-lg transition">
+                    {{ labels.submit }}
+                </button>
+            </div>
+        </form>
+    </div>
+
+</div>
