@@ -1,0 +1,41 @@
+<div class="m-0">
+    <!-- BANNIÈRE AVEC IMAGE DE FOND -->
+    <section class="relative mt-0 bg-career-banner bg-cover bg-center text-white">
+        <div class="bg-black/60 py-28 px-8 sm:px-16 md:px-24 lg:px-32">
+            <h2 class="text-md uppercase font-semibold tracking-wide">{{ bannerSubtitle }}</h2>
+            <h1 class="text-5xl sm:text-5xl font-bold mt-2">{{ bannerTitle }}</h1>
+        </div>
+    </section>
+
+    <!-- CONTENU PRINCIPAL -->
+    <section class="flex flex-col lg:flex-row sm:px-12 py-16 lg:px-4">
+        <!-- MENU GAUCHE -->
+        <aside class="bg-[#0b2949] text-white rounded-lg shadow-lg lg:w-2/3">
+            <div class="flex items-start justify-start">
+                <h3 class="uppercase font-bold text-lg p-4">{{ menuTitle }}</h3>
+            </div>
+            <div class="bg-white pl-4 py-4 pr-2 rounded-lg shadow-md">
+                <ul class="flex flex-col justify-start items-start space-y-4 text-sm">
+                    <li *ngFor="let item of menuItems">
+                        <a [routerLink]="item.link" class="text-[#0b2949]">
+                            <span class="text-[#F1B51C] font-bold bg-[#0b2949] p-2 mr-1 rounded-lg">{{ item.prefix
+                                }}</span> {{ item.text }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- TEXTE PRINCIPAL -->
+        <div class="lg:w-2/3 text-gray-800">
+            <h2 class="text-2xl sm:text-3xl font-semibold mb-6">{{ mainHeading }}</h2>
+            <p class="text-base leading-relaxed px-8 text-justify">{{ mainParagraph }}</p>
+            <div class="flex flex-row justify-between px-8 pt-8">
+                <p class="text-[#0b2949] font-semibold">{{ contactUs }}</p>
+                <button type="submit" class="bg-[#6c7cbc] font-semibold text-white px-6 py-2 rounded-lg">
+                    {{ submitMessage }}
+                </button>
+            </div>
+        </div>
+    </section>
+</div>

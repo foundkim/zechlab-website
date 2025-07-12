@@ -7,8 +7,8 @@ export const contactData = {
     icon: 'location_on',
     title: 'Adresse',
     addressLine1: 'Apt. A3, Imm. Galerie',
-    addressLine2: 'HKM, Rte d\'Abatta, Abatta,',
-    addressLine3: 'Abidjan, Côte d\'Ivoire',
+    addressLine2: "HKM, Rte d'Abatta, Abatta,",
+    addressLine3: "Abidjan, Côte d'Ivoire",
   },
 
   phone: {
@@ -24,24 +24,23 @@ export const contactData = {
     address: 'contact@zechlab.com',
   },
 
-  labels : {
+  labels: {
     formTitle: 'Formulaire de contact',
     name: 'Nom',
     email: 'Email',
     message: 'Message',
-    submit: 'Envoyer'
+    submit: 'Envoyer',
   },
 
-  placeholders : {
+  placeholders: {
     name: 'Entrez votre nom',
     email: 'Entrez votre adresse email',
-    message: 'Écrivez votre message ici...'
+    message: 'Écrivez votre message ici...',
   },
 
-  form : {
+  form: {
     name: '',
     email: '',
-    message: ''
+    message: '',
   },
-
 };

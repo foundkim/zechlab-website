@@ -10,15 +10,18 @@
                 <mat-icon class="text-[#d4a43c] mb-4">location_on</mat-icon>
                 <h3 class="text-lg font-semibold">{{ office.title }}</h3>
             </div>
-            <p class="text-[#d4a43c] mt-4">{{ office.addressLine1 }}<br>{{ office.addressLine2
-                }}<br>{{office.addressLine3}}</p>
+            <p class="text-[#d4a43c] mt-4">
+                {{ office.addressLine1 }}<br />{{ office.addressLine2 }}<br />{{
+                office.addressLine3
+                }}
+            </p>
         </div>
 
         <!-- Email -->
         <div class="flex flex-col items-center text-center bg-[#ffffff] border-0 shadow-md hover:shadow-lg p-8"
             *ngIf="email">
             <div class="border-b-4 border-[#98d4bc] pb-4">
-                <mat-icon class="text-[#d4a43c] mb-4">{{email.icon}}</mat-icon>
+                <mat-icon class="text-[#d4a43c] mb-4">{{ email.icon }}</mat-icon>
                 <h3 class="text-lg font-semibold">{{ email.title }}</h3>
             </div>
             <p class="text-[#d4a43c] mt-4">
@@ -34,7 +37,7 @@
                 <h3 class="text-lg font-semibold">{{ phone.title }}</h3>
             </div>
             <p class="text-[#d4a43c] mt-4">
-                {{ phone.number1 }}<br>{{ phone.number2 }}
+                {{ phone.number1 }}<br />{{ phone.number2 }}
             </p>
         </div>
     </div>
@@ -46,7 +49,9 @@
         <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="space-y-6">
             <!-- Nom -->
             <div>
-                <label class="block text-gray-700 font-medium mb-1" for="name">{{ labels.name }}</label>
+                <label class="block text-gray-700 font-medium mb-1" for="name">{{
+                    labels.name
+                    }}</label>
                 <input type="text" id="name" name="name" [(ngModel)]="form.name" [placeholder]="placeholders.name"
                     required
                     class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
@@ -54,7 +59,9 @@
 
             <!-- Email -->
             <div>
-                <label class="block text-gray-700 font-medium mb-1" for="email">{{ labels.email }}</label>
+                <label class="block text-gray-700 font-medium mb-1" for="email">{{
+                    labels.email
+                    }}</label>
                 <input type="email" id="email" name="email" [(ngModel)]="form.email" [placeholder]="placeholders.email"
                     required
                     class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
@@ -62,7 +69,9 @@
 
             <!-- Message -->
             <div>
-                <label class="block text-gray-700 font-medium mb-1" for="message">{{ labels.message }}</label>
+                <label class="block text-gray-700 font-medium mb-1" for="message">{{
+                    labels.message
+                    }}</label>
                 <textarea id="message" name="message" rows="5" [(ngModel)]="form.message"
                     [placeholder]="placeholders.message" required
                     class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
@@ -77,5 +86,4 @@
             </div>
         </form>
     </div>
-
 </div>

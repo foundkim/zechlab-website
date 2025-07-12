@@ -6,7 +6,7 @@ import { contactData } from './config/contacts';
   selector: 'app-contacts',
   imports: [SharedModule],
   templateUrl: './contacts.component.html',
-  styleUrl: './contacts.component.css'
+  styleUrl: './contacts.component.css',
 })
 export class ContactsComponent {
   title = contactData.title;
@@ -15,7 +15,7 @@ export class ContactsComponent {
   phone = contactData.phone;
   email = contactData.email;
   labels = contactData.labels;
-  placeholders = contactData.placeholders; 
+  placeholders = contactData.placeholders;
   form = contactData.form;
 
   onSubmit() {
