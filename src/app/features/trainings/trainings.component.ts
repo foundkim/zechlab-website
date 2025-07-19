@@ -6,15 +6,15 @@ import { trainingConfig } from './config/training';
   selector: 'app-trainings',
   imports: [SharedModule],
   templateUrl: './trainings.component.html',
-  styleUrl: './trainings.component.css'
+  styleUrl: './trainings.component.css',
 })
 export class TrainingsComponent {
-    bannerSubtitle = trainingConfig.bannerSubtitle;
-    bannerTitle = trainingConfig.bannerTitle;
-    menuTitle = trainingConfig.menuTitle;
-    mainHeading = trainingConfig.mainHeading;
-    mainParagraph = trainingConfig.mainParagraph;
-    menuItems = trainingConfig.menuItems;
-    contactUs = trainingConfig.contactUs;
-    submitMessage = trainingConfig.submitMessage;
+  bannerSubtitle = trainingConfig.bannerSubtitle;
+  bannerTitle = trainingConfig.bannerTitle;
+  menuTitle = trainingConfig.menuTitle;
+  mainHeading = trainingConfig.mainHeading;
+  mainParagraph = trainingConfig.mainParagraph;
+  menuItems = trainingConfig.menuItems;
+  contactUs = trainingConfig.contactUs;
+  submitMessage = trainingConfig.submitMessage;
 }
