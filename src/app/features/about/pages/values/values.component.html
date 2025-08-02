@@ -1,15 +1,17 @@
 <section class="py-16 px-6 bg-gray-50 text-center">
-    <h2 class="text-3xl font-bold mb-12">{{ sectionTitle }}</h2>
+  <h2 class="text-3xl font-bold mb-12">{{ sectionTitle }}</h2>
 
-    <div class="grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div *ngFor="let value of valueItems"
-            class="bg-white w-64 h-64 flex flex-col items-center justify-center rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-2 p-4 text-center">
-            <mat-icon class="text-blue-600 text-5xl mb-2">{{ value.icon }}</mat-icon>
-            <h3 class="text-lg font-semibold mb-1">{{ value.title }}</h3>
-        </div>
+  <div class="grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div
+      *ngFor="let value of valueItems"
+      class="bg-white w-64 h-64 flex flex-col items-center justify-center rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-2 p-4 text-center"
+    >
+      <mat-icon class="text-blue-600 text-5xl mb-2">{{ value.icon }}</mat-icon>
+      <h3 class="text-lg font-semibold mb-1">{{ value.title }}</h3>
     </div>
+  </div>
 
-    <div class="mt-16 flex flex-col items-center">
-        <p class="text-gray-600 w-[72%] text-md text-center">{{ text }}</p>
-    </div>
+  <div class="mt-16 flex flex-col items-center">
+    <p class="text-gray-600 w-[72%] text-md text-center">{{ text }}</p>
+  </div>
 </section>

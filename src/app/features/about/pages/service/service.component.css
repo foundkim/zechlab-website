@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.bg-career-banner {
+  background-image: url("/assets/images/i7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  z-index: 1;
+  margin-bottom: 50px;
+}
+
+section {
+    font-family: "Montserrat", sans-serif;
+}
+
+p {
+  padding-right: 100px;
+  font-family: Zilla Slab, serif;
+}
+
+a {
+  padding: 8px 12px;
+}

@@ -8,7 +8,6 @@ import { SharedModule } from '../../../../shared/shared.module';
   templateUrl: './values.component.html',
   styleUrl: './values.component.css',
 })
-
 export class ValuesComponent {
   sectionTitle = valuesConfig.sectionTitle;
   valueItems = valuesConfig.valueItems;
