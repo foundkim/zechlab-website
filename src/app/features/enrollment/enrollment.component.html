@@ -1,0 +1,44 @@
+<div class="max-w-3xl mx-auto px-4 py-12 text-center">
+    <div class="flex flex-col gap-10 items-center mb-10">
+
+        <!-- Titre -->
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">
+            {{ enrollment.pageTitle }}
+        </h1>
+
+        <div class="flex gap-10 justify-center mb-10">
+            <!-- Illustration -->
+            <img src="assets/images/proj-1.jpeg" alt="Recruitment Illustration" class="w-1/2 h-auto object-cover" />
+
+            <!-- Texte de présentation -->
+            <p class="w-1/2 text-lg text-justify text-gray-600 mb-8">
+                {{ enrollment.pageSubtitle }}
+            </p>
+        </div>
+    </div>
+
+    <!-- Liste des offres -->
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Postes disponibles</h2>
+    <ul class="space-y-4 mb-10">
+        <li *ngFor="let job of enrollment.jobOffers"
+            class="flex justify-between items-center bg-gray-100 p-4 rounded-lg shadow-sm">
+            <span class="font-medium text-gray-800">{{ job.title }}</span>
+            <span class="text-sm text-gray-500">{{ job.location }}</span>
+        </li>
+    </ul>
+
+    <!-- Bouton de candidature -->
+    <div class="bg-white shadow-lg rounded-lg p-6">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            {{ enrollment.applyNowText }}
+        </h3>
+        <p class="text-gray-600 mb-4">
+            Send your resume and cover letter to
+            <span class="font-medium text-gray-900">{{ enrollment.contactEmail }}</span>
+        </p>
+        <a href="https://forms.gle/rLsEdUFoCvWwXQGR7"
+            class="bg-[#0B2949] hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+            {{ enrollment.applyNowText }}
+        </a>
+    </div>
+</div>

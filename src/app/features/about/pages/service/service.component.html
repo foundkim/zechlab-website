@@ -1,36 +1,58 @@
 <!-- BANNIÈRE EN PLEINE LARGEUR -->
-<div class="w-full h-[35rem] bg-career-banner bg-cover bg-center text-white flex justify-center items-center mb-16">
-    <div class="py-28 px-8 sm:px-16 md:px-24 lg:px-32 text-center">
-        <h2 class="text-2xl uppercase font-semibold tracking-wide">
-            {{ bannerTitle }}
-        </h2>
-        <h1 class="text-5xl sm:text-5xl font-bold">{{ bannerSubtitle }} </h1>
-    </div>
+<div
+  class="w-full h-[35rem] bg-career-banner bg-cover bg-center text-white flex justify-center items-center mb-16"
+>
+  <div class="py-28 px-8 sm:px-16 md:px-24 lg:px-32 text-center">
+    <h2 class="text-2xl uppercase font-semibold tracking-wide">
+      {{ bannerTitle }}
+    </h2>
+    <h1 class="text-5xl sm:text-5xl font-bold">{{ bannerSubtitle }}</h1>
+  </div>
 </div>
 
 <!-- CONTENU PRINCIPAL -->
 <section class="py-16 px-6 mt-6">
-    <div class="flex flex-col gap-6 justify-center items-center">
-        <div *ngFor="let service of services"
-            class="flex flex-col gap-6 md:flex-row bg-[#f4dca4] w-full shadow-md overflow-hidden">
-            <!-- Image -->
-            <div class="md:w-1/2">
-                <img [src]="service.image" [alt]="service.title" class="w-full h-85 object-cover">
-            </div>
-            <!-- Contenu -->
-            <div class="md:w-1/2 p-6 flex flex-col gap-6 justify-center items-start">
-                <h3 class="text-2xl text-[#0b2949] font-semibold mb-3">{{ service.title }}</h3>
-                <p class="text-gray-600 text-start">{{ service.description }}</p>
-                <a [href]="service.link" target="_blank"
-                    class="inline-flex items-center bg-[#F1B51C] text-[#0b2949] rounded-full font-bold text-sm px-6 py-3">
-                    {{ service.cta }}
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </a>
-
-            </div>
-        </div>
+  <div class="flex flex-col gap-6 justify-center items-center">
+    <div
+      *ngFor="let service of services"
+      class="flex flex-col gap-6 md:flex-row bg-[#f4dca4] w-full shadow-md overflow-hidden"
+    >
+      <!-- Image -->
+      <div class="md:w-1/2">
+        <img
+          [src]="service.image"
+          [alt]="service.title"
+          class="w-full h-85 object-cover"
+        />
+      </div>
+      <!-- Contenu -->
+      <div class="md:w-1/2 p-6 flex flex-col gap-6 justify-center items-start">
+        <h3 class="text-2xl text-[#0b2949] font-semibold mb-3">
+          {{ service.title }}
+        </h3>
+        <p class="text-gray-600 text-start">{{ service.description }}</p>
+        <a
+          [href]="service.link"
+          target="_blank"
+          class="inline-flex items-center bg-[#F1B51C] text-[#0b2949] rounded-full font-bold text-sm px-6 py-3"
+        >
+          {{ service.cta }}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ml-2 h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </a>
+      </div>
     </div>
+  </div>
 </section>

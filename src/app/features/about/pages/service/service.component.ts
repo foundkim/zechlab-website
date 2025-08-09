@@ -11,8 +11,7 @@ import { SharedModule } from '../../../../shared/shared.module';
 export class ServiceComponent {
   bannerTitle = serviceConfig.bannerTitle;
   bannerSubtitle = serviceConfig.bannerSubtitle;
-  services = serviceConfig.services
-
+  services = serviceConfig.services;
 
   @Input() service!: {
     image: string;
